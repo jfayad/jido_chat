@@ -4,12 +4,13 @@
 
 ## Release Status
 
-This package is being prepared for the Jido 1.x chat package release line.
+`jido_chat` is published on Hex as part of the Jido 1.x chat package release
+line.
 
 `Jido.Chat` is an Elixir implementation aligned to the Vercel Chat SDK
 ([chat-sdk.dev/docs](https://www.chat-sdk.dev/docs)).
 
-This package is intentionally scoped to the adapter layer:
+The package is intentionally scoped to the adapter layer:
 
 - `jido_chat` owns typed content/event models, adapter contracts, typed thread/channel handles, and deterministic fallback behavior.
 - `jido_messaging` owns supervised runtime concerns such as webhook ingress, delivery queues, retries, room/session state, bridge lifecycle, and process trees.
@@ -30,10 +31,12 @@ It provides:
 ```elixir
 def deps do
   [
-    {:jido_chat, github: "agentjido/jido_chat", branch: "main"}
+    {:jido_chat, "~> 1.0"}
   ]
 end
 ```
+
+Run `mix deps.get` after adding the dependency.
 
 ## Canonical Adapter Interface
 
