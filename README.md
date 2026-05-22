@@ -1,5 +1,13 @@
 # Jido.Chat
 
+[![Hex.pm](https://img.shields.io/hexpm/v/jido_chat.svg)](https://hex.pm/packages/jido_chat)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/jido_chat/)
+[![CI](https://github.com/agentjido/jido_chat/actions/workflows/ci.yml/badge.svg)](https://github.com/agentjido/jido_chat/actions/workflows/ci.yml)
+[![License](https://img.shields.io/hexpm/l/jido_chat.svg)](https://github.com/agentjido/jido_chat/blob/main/LICENSE)
+[![Website](https://img.shields.io/badge/website-jido.run-0f172a.svg)](https://jido.run)
+[![Ecosystem](https://img.shields.io/badge/ecosystem-jido.run-0ea5e9.svg)](https://jido.run/ecosystem)
+[![Discord](https://img.shields.io/badge/discord-join-5865F2.svg?logo=discord&logoColor=white)](https://jido.run/discord)
+
 `jido_chat` is the core adapter contract and canonical data model for `Jido.Chat` integrations.
 
 ## Release Status
@@ -52,7 +60,7 @@ upload hook used by the core fallback path for single-upload posts.
 2. Declare explicit surface support through `capabilities/0` instead of relying on callback inference.
 3. If you build directly on the lightweight `Jido.Chat` facade and ship a custom `Jido.Chat.StateAdapter`, implement `lock/5`, `release_lock/3`, and `force_release_lock/2`, and persist `locks` plus `pending_locks` in snapshots.
 4. Treat `Jido.Chat.PostPayload` as the canonical outbound contract. It can now carry text, markdown, raw payloads, cards, streams, attachments, and `FileUpload` values.
-5. Run `mix quality` and `mix coveralls` before publishing adapter changes. Release candidates should meet the current Jido coverage threshold.
+5. Run `mix quality` before publishing adapter changes.
 
 ## Usage (Core Loop)
 
