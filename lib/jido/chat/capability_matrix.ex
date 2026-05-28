@@ -108,7 +108,9 @@ defmodule Jido.Chat.CapabilityMatrix do
     status = String.trim(status)
 
     case status do
-      "" -> :unsupported
+      "" ->
+        :unsupported
+
       _ ->
         try do
           String.to_existing_atom(status) |> normalize_status()

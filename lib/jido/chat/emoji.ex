@@ -72,7 +72,9 @@ defmodule Jido.Chat.Emoji do
       |> String.replace("-", "_")
 
     case normalized do
-      "" -> ""
+      "" ->
+        ""
+
       _ ->
         try do
           String.to_existing_atom(normalized)
