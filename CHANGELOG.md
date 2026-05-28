@@ -12,6 +12,15 @@ Initial Hex release of `jido_chat`.
 
 <!-- changelog -->
 
+## [v1.0.2](https://github.com/agentjido/jido_chat/compare/v1.0.1...v1.0.2) (2026-05-28)
+
+
+
+
+### Bug Fixes:
+
+* type: external_message_id can be any type (#22) by Julien
+
 ## [v1.0.1](https://github.com/agentjido/jido_chat/compare/v1.0.0...v1.0.1) (2026-05-21)
 
 
